@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "web",
+    "native",
+    "core"
+  ],
+  "scripts": {
+    "web:start":"yarn workspace web start",
+    "web:build":"yarn workspace web build",
+    "web:test":"yarn workspace web test",
+    "native:start":"yarn workspace native start",
+    "native:test":"yarn workspace native test"
+  }
+}
