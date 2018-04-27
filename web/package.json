@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-art": "^16.3.2",
+    "react-dom": "^16.2.0",
+    "react-native-web": "^0.6.1"
   },
   "devDependencies": {
     "react-app-rewire-yarn-workspaces": "^1.0.2",
