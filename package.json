@@ -10,6 +10,7 @@
     "web:build":"yarn workspace web build",
     "web:test":"yarn workspace web test",
     "native:start":"yarn workspace native start",
-    "native:test":"yarn workspace native test"
+    "native:test":"yarn workspace native test",
+    "test": "yarn native:test && yarn web:test"
   }
 }

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import { TouchableOpacity, Text } from "react-native";
+import { View, Text } from "react-native";
 import value from "core/value";
+import hello from "core/hello";
 
 class App extends Component {
   render() {
     return (
-      <TouchableOpacity
+      <View
         style={{ marginTop: 40 }}
-        onPress={() => alert("just clicked a button! " + value)}
       >
-        <Text>Hello native</Text>
-      </TouchableOpacity>
+        <Text>{hello} {value}</Text>
+      </View>
     );
   }
 }

@@ -17,17 +17,22 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node ../node_modules/jest/bin/jest.js"
+    "test": "node ../node_modules/jest/bin/jest.js",
+    "test:watch": "yarn test --watchAll"
   },
   "jest": {
     "preset": "jest-expo",
     "rootDir": "..",
     "roots": [
       "<rootDir>/native",
+      "<rootDir>/core",
       "<rootDir>/node_modules"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|core|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|sentry-expo))"
+    ],
+    "testMatch": [
+      "**/?(*)!(.web).(spec|test).js?(x)"
     ]
   },
   "dependencies": {
