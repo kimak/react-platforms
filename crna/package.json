@@ -1,5 +1,5 @@
 {
-  "name": "native",
+  "name": "crna",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -24,7 +24,7 @@
     "preset": "jest-expo",
     "rootDir": "..",
     "roots": [
-      "<rootDir>/native",
+      "<rootDir>/expo",
       "<rootDir>/core",
       "<rootDir>/node_modules"
     ],
