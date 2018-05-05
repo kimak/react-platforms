@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "yarn react-native start --config ../../../../native/rn-cli.config.js",
     "test": "jest"
   },
   "dependencies": {
@@ -12,11 +12,26 @@
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
+    "babel-preset-expo": "^4.0.0",
     "babel-preset-react-native": "4.0.0",
-    "jest": "22.4.3",
+    "jest": "^22.4.3",
+    "jest-react-native": "^18.0.0",
+    "metro-bundler-config-yarn-workspaces": "^1.0.3",
     "react-test-renderer": "16.3.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "rootDir": "..",
+    "roots": [
+      "<rootDir>/native",
+      "<rootDir>/core",
+      "<rootDir>/node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|core|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|sentry-expo))"
+    ],
+    "testMatch": [
+      "**/?(*)!(.web).(spec|test).js?(x)"
+    ]
   }
 }

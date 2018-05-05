@@ -24,7 +24,7 @@
     "preset": "jest-expo",
     "rootDir": "..",
     "roots": [
-      "<rootDir>/expo",
+      "<rootDir>/crna",
       "<rootDir>/core",
       "<rootDir>/node_modules"
     ],
