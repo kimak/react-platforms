@@ -3,6 +3,7 @@
   "workspaces": [
     "web",
     "crna",
+    "native",
     "core"
   ],
   "scripts": {
