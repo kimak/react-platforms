@@ -1,20 +1,34 @@
 {
   "private": true,
-  "workspaces": {
-    "packages":[
-      "web",
-      "native",
-      "core"
-    ]
-  },
+  "workspaces": [
+    "web",
+    "native",
+    "core"
+  ],
   "scripts": {
-    "web:start":"yarn workspace web start",
-    "web:build":"yarn workspace web build",
-    "web:test":"yarn workspace web test",
-    "crna:start":"yarn workspace crna start",
-    "crna:test":"yarn workspace crna test",
-    "native:start":"yarn workspace native start",
-    "native:test":"yarn workspace native test",
-    "test": "yarn native:test && yarn web:test"
+    "web:start": "yarn workspace web start",
+    "web:build": "yarn workspace web build",
+    "web:test": "yarn workspace web test",
+    "crna:start": "yarn workspace crna start",
+    "crna:test": "yarn workspace crna test",
+    "native:start": "yarn workspace native start",
+    "native:test": "yarn workspace native test",
+    "test": "yarn native:test && yarn web:test",
+    "flow:symlinks": "flow-mono create-symlinks .flowconfig",
+    "flow:install": "flow-mono install-types --ignoreDeps=peer --overwrite",
+    "flow:stubs": "flow-mono create-stubs",
+    "flow:align":"flow-mono align-versions"
+  },
+  "devDependencies": {
+    "flow-mono-cli": "^1.3.1",
+    "flow-typed": "^2.4.0"
+  },
+  "flow-mono": {
+    "create-symlinks": {
+      "ignore": ["eslint", "jest"]
+    },
+    "create-stubs": {
+      "dependencies": ["immutable-js"]
+    }
   }
 }
